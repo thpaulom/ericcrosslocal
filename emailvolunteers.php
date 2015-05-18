@@ -105,7 +105,7 @@ if (isset($_REQUEST['email']))
 			$eventname = mysql_result($result, 0,'eventname');
 
 			//get the signup information
-			$query = "SELECT * FROM signups where eventid=$eventid and waitlist=0 and noshow=false";
+			$query = "SELECT * FROM signups where eventid=$eventid and waitlist=0 and noshow=false and withdrew=0";
 			$result = queryMySql($query);
 			
 			//set up two arrays to store student and parent emails

@@ -299,7 +299,8 @@ $months = array('1'=>'January',
 
 //Query database for every event and output it in an <html> table
 
-$query = "SELECT * FROM events where closed=0 and eventdate between NOW() and NOW() + INTERVAL 2 MONTH  ORDER BY eventdate;"; //Selects all open events and orders them by most recent in the future to furthest
+//$query = "SELECT * FROM events where closed=0 and eventdate between NOW() and NOW() + INTERVAL 2 MONTH  ORDER BY eventdate;"; //Selects all open events and orders them by most recent in the future to furthest
+$query = "SELECT * FROM events where closed=0 and id != 94 and id != 96 ORDER BY eventdate;"; // selects all open events
 $result = queryMySql($query); //stores query in a result object
 $numrows = mysql_num_rows($result);
 $eventid = null;

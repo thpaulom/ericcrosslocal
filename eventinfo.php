@@ -19,7 +19,7 @@ if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']) && (isset
             $eventname = mysql_result($result, 0,'eventname');
 
             $isclosed = mysql_result($result,0,'closed');//get information regarding whether the event is closed or not
-
+            $ishalfcredit = mysql_result($result, 0,'defaultcredits') < 1 ? true : false;
 
             /*
              *
@@ -465,8 +465,16 @@ END;
                     <button style ='width:150px;margin-bottom:2px' class = 'comment btn btn-primary' value = '".mysql_result($result,$i,'studentid')."'>Comment</button>
                     <br>
                     <button style ='width:150px;margin-bottom:2px' class = 'withdrew btn btn-info' value = '".mysql_result($result,$i,'studentid')."'>Withdrew</button>
-                    <br>
-                    <button style ='width:150px;margin-bottom:2px' class = 'halfcredit btn btn-success' value = '".mysql_result($result,$i,'studentid')."'>Half Credit</button>
+                    ";
+                    
+                    if ($ishalfcredit){
+
+                    }else{
+
+
+                    echo"<br><button style ='width:150px;margin-bottom:2px' class = 'halfcredit btn btn-success' value = '".mysql_result($result,$i,'studentid')."'>Half Credit</button>";
+                    }
+                    echo "
                     <br>
                     <button id = 'noshow' style = 'width:150px;margin-bottom:2px' class='noshow btn btn-warning' value = '".mysql_result($result, $i,'studentid')."'>No Show</button>
 					<br>

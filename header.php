@@ -171,6 +171,10 @@ if (isset($_SESSION['userid'])){ //check if the user is logged in already using 
 	$ufirstname = ucfirst($_SESSION['ufirstname']); //sets variables based on stored session variables
 	$ulastname = ucfirst($_SESSION['ulastname']);
 	$userid = $_SESSION['userid'];
+
+ 
+
+
 	$loggedin = true;
 }
 else{ //if the session has expired or been terminated, no variables will be stored so user must log in
