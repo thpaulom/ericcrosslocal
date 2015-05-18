@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 
-
+//Hi I'm Paul to the power of 7
 
 if ($loggedin == true){ //if $logged in is already initialized and true, user is already signed in
 
