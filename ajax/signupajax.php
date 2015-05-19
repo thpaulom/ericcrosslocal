@@ -73,7 +73,7 @@ if (isset($_POST['id']) && isset($_POST['eventid'])){
 		$mail->Port       = 587;
 		$mail->SMTPAuth = true;
 		$mail->Username = 'eric.yu@kinkaid.org';
-		$mail->Password = 'Hdodlq55';
+		$mail->Password = 'Password';
 		$mail->SMTPSecure = 'tls';
 		
 		$subject = "Event Confirmation Email";//add subject
