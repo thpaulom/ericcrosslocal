@@ -45,7 +45,7 @@ if (isset($_REQUEST['email']))
 			$mail->Port       = 587;
 			$mail->SMTPAuth = true;
 			$mail->Username = 'eric.yu@kinkaid.org';
-			$mail->Password = 'Hdodlq55';
+			$mail->Password = 'Password';
 			$mail->SMTPSecure = 'tls';
 			
 			//stores the POST data from the textareas in varibales
